@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Shopee | India's Premier 2-Wheeler Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                        brand: {
+                            red: '#e11d48',
+                            orange: '#f97316',
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'spin-reverse': 'spin-reverse 10s linear infinite',
+                        'marquee': 'marquee 25s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'spin-reverse': {
+                            from: { transform: 'rotate(360deg)' },
+                            to: { transform: 'rotate(0deg)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1, boxShadow: '0 0 15px #e11d48' },
+                            '50%': { opacity: .7, boxShadow: '0 0 30px #f97316' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #e11d48; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+    </style>
+</head>
+<body class="bg-dark text-slate-200 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-motorcycle text-brand-red text-3xl"></i>
+                    <span class="font-bold text-2xl tracking-tight text-white">Auto<span class="text-brand-red">Shopee</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-300 hover:text-brand-orange transition-colors font-medium">Home</a>
+                    <a href="#parts" class="text-slate-300 hover:text-brand-orange transition-colors font-medium">Spares</a>
+                    <a href="#pre-owned" class="text-slate-300 hover:text-brand-orange transition-colors font-medium">Pre-Owned</a>
+                    <a href="#gadgets" class="text-slate-300 hover:text-brand-orange transition-colors font-medium">Gadgets</a>
+                    <a href="#contact" class="bg-brand-red hover:bg-brand-orange text-white px-5 py-2 rounded-full font-medium transition-all shadow-lg shadow-brand-red/30">Contact Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Background Animated Elements -->
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+            <i class="fa-solid fa-gear absolute top-20 left-10 text-[15rem] text-brand-red animate-spin-slow"></i>
+            <i class="fa-solid fa-gear absolute top-60 left-48 text-[8rem] text-brand-orange animate-spin-reverse"></i>
+            <i class="fa-solid fa-dharmachakra absolute bottom-10 right-20 text-[20rem] text-slate-400 animate-spin-slow"></i>
+            <i class="fa-solid fa-motorcycle absolute top-1/3 right-1/4 text-[10rem] text-brand-red animate-float"></i>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-brand-orange text-sm font-semibold tracking-wider mb-6">MADE IN INDIA EXCELLENCE</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                Your Ultimate Ride <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-orange">Starts Here.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto mb-10">
+                Premium Indian two-wheeler spare parts, certified pre-owned bikes, and the trendiest riding gadgets—all at unbeatable prices.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#parts" class="px-8 py-4 bg-brand-red hover:bg-brand-orange text-white font-bold rounded-lg shadow-lg shadow-brand-red/40 transition-all hover:-translate-y-1">
+                    Shop Spare Parts
+                </a>
+                <a href="#pre-owned" class="px-8 py-4 bg-transparent border-2 border-slate-600 hover:border-brand-orange text-white font-bold rounded-lg transition-all hover:bg-slate-800">
+                    Explore Used Bikes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-gradient-to-r from-brand-red via-brand-orange to-brand-red py-4 overflow-hidden relative animate-pulse-glow z-20">
+        <div class="whitespace-nowrap w-full">
+            <div class="inline-block animate-marquee text-white font-bold text-xl tracking-wide">
+                🔥 FLASH FESTIVE OFFERS! 🔥 FLAT 40% OFF ON ALL ROYAL ENFIELD SPARES! 🏍️ FREE INSTALLATION ON GADGETS WORTH ₹5000+! ⚡ EXCHANGE BONUS UP TO ₹10,000 ON PRE-OWNED BIKES! 🎁 DIWALI DHAMAKA SALE LIVE NOW! 🔥
+            </div>
+        </div>
+    </div>
+
+    <section id="parts" class="py-20 bg-dark relative border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Affordable Indian Spare Parts</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-400">Genuine parts manufactured in India for extreme durability.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Part Item 1 -->
+                <div class="bg-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-xl border border-slate-800 hover:border-brand-orange/50">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://placehold.co/400x300/2a3b5c/ffffff?text=Disc+Brakes" alt="Disc Brakes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-brand-red text-white text-xs font-bold px-2 py-1 rounded">-20%</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white mb-1">Premium Disc Brakes</h3>
+                        <p class="text-sm text-slate-400 mb-3">Fits Bajaj & TVS</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-brand-orange">₹1,250</span>
+                            <button class="bg-slate-700 hover:bg-brand-red text-white p-2 rounded-full transition-colors"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part Item 2 -->
+                <div class="bg-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-xl border border-slate-800 hover:border-brand-orange/50">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://placehold.co/400x300/2a3b5c/ffffff?text=Alloy+Wheels" alt="Alloy Wheels" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white mb-1">Sport Alloy Wheels</h3>
+                        <p class="text-sm text-slate-400 mb-3">Universal Fit</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-brand-orange">₹4,500</span>
+                            <button class="bg-slate-700 hover:bg-brand-red text-white p-2 rounded-full transition-colors"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part Item 3 -->
+                <div class="bg-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-xl border border-slate-800 hover:border-brand-orange/50">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://placehold.co/400x300/2a3b5c/ffffff?text=LED+Headlamps" alt="Headlamps" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-brand-orange text-white text-xs font-bold px-2 py-1 rounded">HOT</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white mb-1">LED Headlamps Pro</h3>
+                        <p class="text-sm text-slate-400 mb-3">Royal Enfield Series</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-brand-orange">₹2,100</span>
+                            <button class="bg-slate-700 hover:bg-brand-red text-white p-2 rounded-full transition-colors"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part Item 4 -->
+                <div class="bg-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-xl border border-slate-800 hover:border-brand-orange/50">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://placehold.co/400x300/2a3b5c/ffffff?text=Chain+Sprocket" alt="Chain Sprocket" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white mb-1">Heavy Duty Sprocket</h3>
+                        <p class="text-sm text-slate-400 mb-3">Hero MotoCorp</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-brand-orange">₹850</span>
+                            <button class="bg-slate-700 hover:bg-brand-red text-white p-2 rounded-full transition-colors"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-brand-red text-brand-red hover:bg-brand-red hover:text-white px-8 py-3 rounded-full font-bold transition-all">View Full Catalog</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pre-owned" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pre-Owned Beasts</h2>
+                    <div class="w-24 h-1 bg-brand-orange rounded-full"></div>
+                    <p class="mt-4 text-slate-400 max-w-xl">Fully inspected, certified, and ready to hit the Indian roads. Sell us your old ride or buy a verified second-hand machine.</p>
+                </div>
+                <button class="bg-brand-orange hover:bg-brand-red text-white px-6 py-3 rounded-lg font-bold transition-colors shadow-lg shadow-brand-orange/20 whitespace-nowrap">
+                    Sell Your Bike
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Bike 1 -->
+                <div class="bg-card rounded-2xl overflow-hidden border border-slate-800 flex flex-col">
+                    <img src="https://placehold.co/600x400/1e293b/e11d48?text=Royal+Enfield+Classic+350" alt="Bike 1" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">RE Classic 350</h3>
+                            <span class="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded">Certified</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-4">2020 Model • 15,000 km • Single Owner</p>
+                        <div class="mt-auto flex justify-between items-center border-t border-slate-700 pt-4">
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider">Estimated Price</p>
+                                <p class="text-2xl font-bold text-white">₹1,45,000</p>
+                            </div>
+                            <button class="text-brand-orange hover:text-white transition-colors">Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 2 -->
+                <div class="bg-card rounded-2xl overflow-hidden border border-slate-800 flex flex-col">
+                    <img src="https://placehold.co/600x400/1e293b/e11d48?text=KTM+Duke+200" alt="Bike 2" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">KTM Duke 200</h3>
+                            <span class="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded">Certified</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-4">2021 Model • 8,500 km • MH Registration</p>
+                        <div class="mt-auto flex justify-between items-center border-t border-slate-700 pt-4">
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider">Estimated Price</p>
+                                <p class="text-2xl font-bold text-white">₹1,65,000</p>
+                            </div>
+                            <button class="text-brand-orange hover:text-white transition-colors">Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 3 -->
+                <div class="bg-card rounded-2xl overflow-hidden border border-slate-800 flex flex-col">
+                    <img src="https://placehold.co/600x400/1e293b/e11d48?text=Honda+Activa+6G" alt="Bike 3" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">Honda Activa 6G</h3>
+                            <span class="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded">Certified</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-4">2022 Model • 5,000 km • Scratchless</p>
+                        <div class="mt-auto flex justify-between items-center border-t border-slate-700 pt-4">
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider">Estimated Price</p>
+                                <p class="text-2xl font-bold text-white">₹62,000</p>
+                            </div>
+                            <button class="text-brand-orange hover:text-white transition-colors">Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gadgets" class="py-20 bg-dark border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Trendy Arrivals & Gadgets</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-400">Upgrade your ride with the latest tech and accessories.</p>
+            </div>
+
+            <!-- CSS Grid Gallery -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px]">
+                
+                <div class="col-span-1 md:col-span-2 row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://placehold.co/800x600/334155/ffffff?text=Smart+Helmets" alt="Smart Helmets" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">New Arrival</span>
+                        <h3 class="text-2xl font-bold text-white mb-1">Bluetooth Smart Helmets</h3>
+                        <p class="text-slate-300 text-sm">Built-in intercom, DOT certified.</p>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://placehold.co/400x300/334155/ffffff?text=GPS+Trackers" alt="GPS Trackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="text-lg font-bold text-white">Anti-Theft GPS</h3>
+                        <p class="text-brand-orange text-sm font-bold">₹2,999</p>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://placehold.co/400x300/334155/ffffff?text=Riding+Gloves" alt="Riding Gloves" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="text-lg font-bold text-white">Carbon Fiber Gloves</h3>
+                        <p class="text-brand-orange text-sm font-bold">₹1,499</p>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://placehold.co/800x300/334155/ffffff?text=Action+Cameras+&+Mounts" alt="Cameras" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="text-xl font-bold text-white">Action Cams & Mounts</h3>
+                        <p class="text-brand-orange text-sm font-bold">Starting at ₹4,500</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-card relative">
+        <!-- Background decoration -->
+        <i class="fa-solid fa-wrench absolute top-10 right-10 text-[10rem] text-slate-800/50 animate-pulse"></i>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get in Touch</h2>
+                    <div class="w-24 h-1 bg-brand-red mb-8 rounded-full"></div>
+                    <p class="text-slate-400 mb-8">Need a specific spare part? Want an estimate for your old bike? Drop us a line and our experts will get back to you immediately.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-orange flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Our Workshop</h4>
+                                <p class="text-slate-400">123 Auto Market Hub, Near Highway,<br>New Delhi, India 110001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-orange flex-shrink-0">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Call Us</h4>
+                                <p class="text-slate-400">+91 98765 43210 <br> Toll-Free: 1800-123-BIKE</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-orange flex-shrink-0">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Email Support</h4>
+                                <p class="text-slate-400">support@autoshopee.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-dark p-8 rounded-2xl shadow-xl border border-slate-800">
+                    <form class="space-y-5" onsubmit="event.preventDefault();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-1">First Name</label>
+                                <input type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors" placeholder="Rahul">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-1">Last Name</label>
+                                <input type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors" placeholder="Sharma">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-1">Phone Number</label>
+                            <input type="tel" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors" placeholder="+91">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-1">What do you need?</label>
+                            <select class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors">
+                                <option>Spare Parts Inquiry</option>
+                                <option>Sell Old Bike</option>
+                                <option>Buy Pre-Owned Bike</option>
+                                <option>Gadget Availability</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-1">Message</label>
+                            <textarea rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors" placeholder="Describe your requirement..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-brand-red to-brand-orange hover:from-brand-orange hover:to-brand-red text-white font-bold py-3 rounded-lg shadow-lg transition-all transform hover:-translate-y-1">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-10 border-t border-slate-900 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <i class="fa-solid fa-motorcycle text-slate-500 text-2xl"></i>
+                <span class="font-bold text-xl tracking-tight text-slate-500">Auto<span class="text-slate-600">Shopee</span></span>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-slate-500 hover:text-brand-orange text-2xl transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-slate-500 hover:text-brand-orange text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-slate-500 hover:text-brand-orange text-2xl transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-slate-500 hover:text-brand-orange text-2xl transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="text-slate-600 text-sm">
+                &copy; 2026 Automobile Shopee India. All rights reserved. Made for Indian Riders.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
